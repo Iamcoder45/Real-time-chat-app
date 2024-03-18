@@ -1,0 +1,79 @@
+{% block content %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }
+
+    .card p {
+        margin: 10px 0;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .button:hover {
+        background-color: #555;
+    }
+</style>
+
+
+{% for i in users %}
+
+<div class="container">
+    <div class="card">
+
+        <!-- <h3>{{i["user"]}} </h3> 
+        <h>{{i["msg"]}}</h3> -->
+
+        <p> <strong>{{i["user"]}}</strong> {{i["msg"]}} </p>
+        <p> {{i["date"]}}</p>
+       
+    </div>
+  
+    <!-- More cards for other food items -->
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}
